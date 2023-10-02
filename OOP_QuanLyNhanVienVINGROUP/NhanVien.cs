@@ -12,7 +12,7 @@ namespace OOP_QuanLyNhanVienVINGROUP
     {
         protected string MaSo;
         protected string HoTen;
-        protected DateTime NgaySinh;
+        protected string NgaySinh;
         protected string GioiTinh;
         protected int ThamNien;
         protected double LuongCoBan = 1300000.0;
@@ -24,22 +24,24 @@ namespace OOP_QuanLyNhanVienVINGROUP
             {
                 if (value == 2.34 || value == 2.67 || value == 3.0 || value == 3.33 || value == 3.66 || value == 3.99 || value == 4.32 || value == 4.65)
                 {
-                    heSoLuong = value;                }
+                    heSoLuong = value;
+                }
                 else
                 {
                     Console.WriteLine("He So Luong Khong Hop Le.");
                 }
             }
         }
-        public NhanVien() {             
-                   MaSo = "";
-                   HoTen = "";
-                   NgaySinh = DateTime.Now;
-                   GioiTinh = "";
-                   ThamNien = 0;
-                   heSoLuong = 0.0;
+        public NhanVien()
+        {
+            MaSo = "";
+            HoTen = "";
+            NgaySinh = "";
+            GioiTinh = "";
+            ThamNien = 0;
+            heSoLuong = 0.0;
         }
-        public NhanVien(string MaSo, string HoTen, DateTime NgaySinh, string GioiTinh, int ThamNien, double heSoLuong)
+        public NhanVien(string MaSo, string HoTen, string NgaySinh, string GioiTinh, int ThamNien, double heSoLuong)
         {
             this.MaSo = MaSo;
             this.HoTen = HoTen;
@@ -50,14 +52,14 @@ namespace OOP_QuanLyNhanVienVINGROUP
         }
         public double PhuCapThamNien()
         {
-            if (ThamNien /12 <= 3)
+            if (ThamNien / 12 <= 3)
                 return 1000000;
-            else if (ThamNien /12 <= 6)
+            else if (ThamNien / 12 <= 6)
                 return 2000000;
             else if (ThamNien / 12 <= 10)
                 return 4000000;
             else
-                return 5000000 + (ThamNien /12 - 10) * 1000000;
+                return 5000000 + (ThamNien / 12 - 10) * 1000000;
         }
         public abstract string XepLoai();
         public abstract double Luong();
@@ -70,7 +72,7 @@ namespace OOP_QuanLyNhanVienVINGROUP
             else if (XepLoai() == "C")
                 return Luong() * 0.50 + PhuCapThamNien();
             else
-                return Luong() *0.0 + PhuCapThamNien();
+                return Luong() * 0.0 + PhuCapThamNien();
         }
         public virtual void Nhap()
         {
@@ -79,27 +81,46 @@ namespace OOP_QuanLyNhanVienVINGROUP
             Console.WriteLine("Nhap ho ten: ");
             HoTen = Console.ReadLine();
             Console.WriteLine("Nhap ngay sinh: ");
-            NgaySinh = DateTime.Parse(Console.ReadLine());
+            NgaySinh = Console.ReadLine();
             Console.WriteLine("Nhap gioi tinh: ");
             GioiTinh = Console.ReadLine();
             Console.WriteLine("Nhap tham nien: ");
             ThamNien = int.Parse(Console.ReadLine());
-            Console.WriteLine("Nhap he so luong: ");
-            HeSoLuong = double.Parse(Console.ReadLine());
-        }        
+            Console.WriteLine("Nhap he so luong\t 2.34\t2.67\t 3.0\t 3.33\t 3.66\t 3.99\t 4.32\t 4.65: ");
+            do
+            {
+                if (double.TryParse(Console.ReadLine(), out heSoLuong))
+                {
+                    if (heSoLuong == 2.34 || heSoLuong == 2.67 || heSoLuong == 3.0 || heSoLuong == 3.33 || heSoLuong == 3.66 || heSoLuong == 3.99 || heSoLuong == 4.32 || heSoLuong == 4.65)
+                    {
+                        break; // Neu gia tri dung, thoat khoi vong lap
+                    }
+                    else
+                    {
+                        Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
+                }
+            } while (true); // Lap cho den khi bien hop le
+        }
+
+
         public virtual void Xuat()
         {
-            Console.WriteLine("Ma so la: {0}",MaSo);
-            Console.WriteLine("Ho ten la: {0}",HoTen);
-            Console.WriteLine("Ngay sinh la: {0}",NgaySinh);
-            Console.WriteLine("Gioi tinh la: {0}",GioiTinh);
-            Console.WriteLine("Tham nien la: {0}",ThamNien);
-            Console.WriteLine("He so luong la: {0}",HeSoLuong);
-            Console.WriteLine("Luong co ban la: {0}",LuongCoBan);
-            Console.WriteLine("Phu cap tham nien la: {0}",PhuCapThamNien());
-            Console.WriteLine("Xep loai la: {0}",XepLoai());
-            Console.WriteLine("Luong la: {0}",Luong());
-            Console.WriteLine("Thu nhap la: {0:f}",ThuNhap());
+            Console.WriteLine("Ma so la: {0}", MaSo);
+            Console.WriteLine("Ho ten la: {0}", HoTen);
+            Console.WriteLine("Ngay sinh la: {0}", NgaySinh);
+            Console.WriteLine("Gioi tinh la: {0}", GioiTinh);
+            Console.WriteLine("Tham nien la: {0}", ThamNien);
+            Console.WriteLine("He so luong la: {0}", HeSoLuong);
+            Console.WriteLine("Luong co ban la: {0}", LuongCoBan);
+            Console.WriteLine("Phu cap tham nien la: {0}", PhuCapThamNien());
+            Console.WriteLine("Xep loai la: {0}", XepLoai());
+            Console.WriteLine("Luong la: {0:f}", Luong());
+            Console.WriteLine("Thu nhap la: {0:f}", ThuNhap());
         }
     }
 }

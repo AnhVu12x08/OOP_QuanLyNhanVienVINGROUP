@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="OOP_QuanLyNhanVienVINGROUP.NhanVien">
-    <Position X="0.5" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gAAAFAAAAAAAgAAQQAAAAAAAAAAIAABBAACACAAAoAI=</HashCode>
-      <FileName>NhanVien.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="OOP_QuanLyNhanVienVINGROUP.NhanVienKinhDoanh">
     <Position X="4.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
@@ -26,6 +19,13 @@
     <TypeIdentifier>
       <HashCode>gAAAEABAAAAAAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NhanVienSanXuat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_QuanLyNhanVienVINGROUP.NhanVien">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAFAAAAAAAgAAQQAAAAAAAAAAIAABBAACACAAAoAI=</HashCode>
+      <FileName>NhanVien.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

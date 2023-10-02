@@ -15,7 +15,7 @@ namespace OOP_QuanLyNhanVienVINGROUP
             DoanhSoToiThieu = 0.0;
             DoanhSoTheoThang = 0.0;
         }
-        public NhanVienKinhDoanh(string MaSo, string HoTen, DateTime NgaySinh, string GioiTinh, int ThamNien, double heSoLuong, double DoanhSoToiThieu, double DoanhSoTheoThang) : base(MaSo, HoTen, NgaySinh, GioiTinh, ThamNien, heSoLuong)
+        public NhanVienKinhDoanh(string MaSo, string HoTen, string NgaySinh, string GioiTinh, int ThamNien, double heSoLuong, double DoanhSoToiThieu, double DoanhSoTheoThang) : base(MaSo, HoTen, NgaySinh, GioiTinh, ThamNien, heSoLuong)
         {
             this.DoanhSoToiThieu = DoanhSoToiThieu;
         }
