@@ -10,7 +10,23 @@ namespace OOP_QuanLyNhanVienVINGROUP
 {
     internal abstract class NhanVien
     {
-        protected string MaSo;
+        protected string maSo;
+        public string MaSo
+        {
+            get { return maSo; }
+            set
+            {
+                if (value.Length == 6 && value.StartsWith("VG") && value.Substring(2).All(char.IsDigit))
+                {
+                    maSo = value;
+                }
+                else
+                {
+                    maSo = "";
+                    Console.WriteLine("Da gan ma so bang rong.");
+                }
+            }
+        }
         protected string HoTen;
         protected string NgaySinh;
         protected string GioiTinh;
