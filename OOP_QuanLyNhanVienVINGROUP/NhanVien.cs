@@ -28,7 +28,8 @@ namespace OOP_QuanLyNhanVienVINGROUP
                 }
                 else
                 {
-                    Console.WriteLine("He So Luong Khong Hop Le.");
+                    heSoLuong = 0;
+                    Console.WriteLine("Da gan he so luong bang 0.");
                 }
             }
         }
@@ -87,27 +88,28 @@ namespace OOP_QuanLyNhanVienVINGROUP
             Console.WriteLine("Nhap tham nien: ");
             ThamNien = int.Parse(Console.ReadLine());
             Console.WriteLine("Nhap he so luong\t 2.34\t2.67\t 3.0\t 3.33\t 3.66\t 3.99\t 4.32\t 4.65: ");
-            do
-            {
-                if (double.TryParse(Console.ReadLine(), out heSoLuong))
-                {
-                    if (heSoLuong == 2.34 || heSoLuong == 2.67 || heSoLuong == 3.0 || heSoLuong == 3.33 || heSoLuong == 3.66 || heSoLuong == 3.99 || heSoLuong == 4.32 || heSoLuong == 4.65)
-                    {
-                        break; // Neu gia tri dung, thoat khoi vong lap
-                    }
-                    else
-                    {
-                        Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
-                }
-            } while (true); // Lap cho den khi bien hop le
+            HeSoLuong = double.Parse(Console.ReadLine());
         }
 
-
+        //    do
+        //    {
+        //        if (double.TryParse(Console.ReadLine(), out heSoLuong))
+        //        {
+        //            if (heSoLuong == 2.34 || heSoLuong == 2.67 || heSoLuong == 3.0 || heSoLuong == 3.33 || heSoLuong == 3.66 || heSoLuong == 3.99 || heSoLuong == 4.32 || heSoLuong == 4.65)
+        //            {
+        //                break; // Neu gia tri dung, thoat khoi vong lap
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
+        //        }
+        //    } while (true); // Lap cho den khi bien hop le
+        //}
         public virtual void Xuat()
         {
             Console.WriteLine("Ma so la: {0}", MaSo);
