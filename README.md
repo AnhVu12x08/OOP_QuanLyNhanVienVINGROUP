@@ -39,6 +39,7 @@ Trong công ty VINGROUP, nhân viên được chia thành 3 loại khác nhau tr
   + Nếu xếp loại 'C': nhân viên được hưởng 50% Lương + phụ cấp thâm niên.
   + Nếu xếp loại 'D': nhân viên được hưởng 0% Lương + phụ cấp thâm niên.
 
+
 ### Chi tiết theo từng loại nhân viên:
 
 #### Nhân viên sản xuất:
@@ -77,4 +78,9 @@ Trong công ty VINGROUP, nhân viên được chia thành 3 loại khác nhau tr
 1. Xác định các lớp, vẽ sơ đồ phân cấp cấu trúc các lớp cho bài toán.
 2. Xây dựng các lớp cùng các thuộc tính và phương thức theo yêu cầu.
 3. Hãy tạo danh sách chứa nhân viên của công ty và thực hiện các yêu cầu sau:
-   a. Đọc dữ liệu từ file XML (cấu trúc
+   a. Đọc dữ liệu từ file XML (cấu trúc file do SV tự thiết kế để phù hợp với các truy vấn của bài).
+   b. Xuất danh sách bảng lương của các nhân viên.
+   c. Xuất danh sách các nhân viên của công ty có hệ số lương là 3.99.
+   d. Xuất danh sách các nhân viên có lương cao nhất.
+   e. Đếm số nhân viên có phụ cấp thâm niên.
+   f. Xuất thông tin các nhân viên có thâm niên từ 10 năm trở lên.
