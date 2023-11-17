@@ -107,28 +107,9 @@ namespace OOP_QuanLyNhanVienVINGROUP
             HeSoLuong = double.Parse(Console.ReadLine());
         }
 
-        //    do
-        //    {
-        //        if (double.TryParse(Console.ReadLine(), out heSoLuong))
-        //        {
-        //            if (heSoLuong == 2.34 || heSoLuong == 2.67 || heSoLuong == 3.0 || heSoLuong == 3.33 || heSoLuong == 3.66 || heSoLuong == 3.99 || heSoLuong == 4.32 || heSoLuong == 4.65)
-        //            {
-        //                break; // Neu gia tri dung, thoat khoi vong lap
-        //            }
-        //            else
-        //            {
-        //                Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Gia tri khong hop le vui long nhap lai.");
-        //        }
-        //    } while (true); // Lap cho den khi bien hop le
-        //}
         public virtual void Xuat()
         {
-            Console.WriteLine("Ma so la: {0}", MaSo);
+            Console.WriteLine("Ma so la: {0}", maSo);
             Console.WriteLine("Ho ten la: {0}", HoTen);
             Console.WriteLine("Ngay sinh la: {0}", NgaySinh);
             Console.WriteLine("Gioi tinh la: {0}", GioiTinh);
