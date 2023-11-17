@@ -128,7 +128,7 @@ namespace OOP_QuanLyNhanVienVINGROUP
         //}
         public virtual void Xuat()
         {
-            Console.WriteLine("Ma so la: {0}", MaSo);
+            Console.WriteLine("Ma so la: {0}", maSo);
             Console.WriteLine("Ho ten la: {0}", HoTen);
             Console.WriteLine("Ngay sinh la: {0}", NgaySinh);
             Console.WriteLine("Gioi tinh la: {0}", GioiTinh);
